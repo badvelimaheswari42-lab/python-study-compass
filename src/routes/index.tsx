@@ -119,7 +119,6 @@ function Index() {
               <div className="mt-6 space-y-4">
                 {TOPICS.map((t) => {
                   const m = report.scores[t] ?? 0;
-                  const level = difficultyBadge[statusFor(m) === undefined ? "" : ""] ?? "";
                   const difficulty = levelFor(m).difficulty;
                   const status = statusFor(m);
                   const prev = previous?.scores[t];
