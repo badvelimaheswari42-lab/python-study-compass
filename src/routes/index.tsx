@@ -92,8 +92,9 @@ function Index() {
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {TOPICS.map((t) => (
               <div key={t}>
-                <label className="block text-sm font-medium">{t} (0–100)</label>
+                <label htmlFor={`topic-${t}`} className="block text-sm font-medium">{t} (0–100)</label>
                 <input
+                  id={`topic-${t}`}
                   type="number"
                   step="any"
                   required
