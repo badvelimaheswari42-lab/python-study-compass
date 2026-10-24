@@ -81,8 +81,9 @@ function Index() {
         </p>
 
         <form onSubmit={submit} className="mt-10 rounded-2xl border bg-card p-6 shadow-soft">
-          <label className="block text-sm font-medium">Student name</label>
+          <label htmlFor="student-name" className="block text-sm font-medium">Student name</label>
           <input
+            id="student-name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
