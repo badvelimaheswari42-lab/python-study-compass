@@ -16,5 +16,5 @@ export function levelFor(marks: number): Level {
 }
 
 export function weakestTopic(scores: Record<string, number>): string {
-  return Object.keys(scores).reduce((a, b) => (scores[b] < scores[a] ? b : a));
+  return Object.keys(scores).reduce((a, b) => ((scores[b] ?? 0) < (scores[a] ?? 0) ? b : a));
 }

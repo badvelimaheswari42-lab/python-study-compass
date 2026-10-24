@@ -73,7 +73,7 @@ function Index() {
             <h2 className="font-display text-3xl">Report for {report.name}</h2>
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
               {TOPICS.map((t) => {
-                const m = report.scores[t];
+                const m = report.scores[t] ?? 0;
                 const l = levelFor(m);
                 return (
                   <div key={t} className="rounded-xl border bg-card p-5">
