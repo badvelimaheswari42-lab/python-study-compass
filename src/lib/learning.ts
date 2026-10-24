@@ -9,7 +9,7 @@ export const TOPICS = [
 export type Difficulty = "Easy" | "Medium" | "Advanced";
 export type Status = "Needs support" | "Developing" | "Strong";
 
-export type Level = { difficulty: Difficulty; status: Status; recommendation: string };
+export type Level = { difficulty: Difficulty; status: Status };
 
 // Example lesson recommendations. Replace with links or lessons for your course.
 export const LESSON_LIBRARY: Record<string, Record<"easy" | "medium" | "advanced", string>> = {
