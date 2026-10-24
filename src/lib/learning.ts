@@ -58,9 +58,7 @@ export function statusFor(score: number): Status {
 }
 
 export function levelFor(score: number): Level {
-  const difficulty = difficultyFor(score);
-  const key = difficulty.toLowerCase() as "easy" | "medium" | "advanced";
-  return { difficulty, status: statusFor(score), recommendation: LESSON_LIBRARY[key] ?? "" };
+  return { difficulty: difficultyFor(score), status: statusFor(score) };
 }
 
 export function lessonFor(topic: string, score: number): string {
